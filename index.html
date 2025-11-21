@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Profile card component</title>
+</head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans", sans-serif;
+  }
+
+  body {
+    background-color: hsl(0, 0%, 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Wrapper to hold card + backgrounds */
+  .card-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Background shapes positioned relative to card */
+  .bg-img1,
+  .bg-img2 {
+    position: absolute;
+    width: 200%;
+    max-width: none;
+    z-index: 0;
+  }
+
+  .bg-img1 {
+    top: -100%;
+    right: -50%;
+  }
+
+  .bg-img2 {
+    bottom: -100%;
+    left: -50%;
+  }
+
+  /* Profile card */
+  .container {
+    background-color: #fff;
+    border-radius: 16px;
+    max-width: 350px;
+    width: 90%;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  /* Top pattern */
+  .bg-patt {
+    width: 100%;
+    display: block;
+  }
+
+  /* Profile image */
+  .person-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: white;
+    margin: -55px auto 10px;
+    padding: 5px;
+  }
+
+  .per-imgs {
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  /* Name & location */
+  .per-name {
+    padding-bottom: 20px;
+    border-bottom: 1px solid hsl(0, 0%, 0%);
+  }
+
+  .per-name h3 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .per-name span {
+    font-weight: 400;
+    opacity: 0.6;
+    margin-left: 6px;
+  }
+
+  .per-name h4 {
+    font-weight: 400;
+    opacity: 0.6;
+    font-size: 14px;
+  }
+
+  /* Status section */
+  .status {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+  }
+
+  .status h3 {
+    font-size: 18px;
+  }
+
+  .status span {
+    font-size: 12px;
+    letter-spacing: 1px;
+    opacity: 0.6;
+  }
+
+  /* ====== Responsive Styles ====== */
+
+  /* Mobile view */
+  @media (max-width: 360px) {
+    .profile-content {
+      padding: 50px 20px 20px;
+    }
+
+    .profile-stats {
+      padding-top: 20px;
+    }
+
+    .stat-number {
+      font-size: 15px;
+    }
+  }
+
+  /* Tablet view */
+  @media (max-width: 768px) and (min-width: 481px) {
+
+    .bg-img1,
+    .bg-img2 {
+      width: 160%;
+    }
+  }
+</style>
+
+<body>
+
+  <div class="images">
+    <div class="img1">
+      <img src="./images/bg-pattern-top.svg" alt="" class="bg-img1">
+    </div>
+    <div class="img2">
+      <img src="./images/bg-pattern-bottom.svg" alt="" class="bg-img2">
+    </div>
+
+  </div>
+
+  <div class="container">
+    <img src="./images/bg-pattern-card.svg" alt="" class="bg-patt">
+
+    <div class="person-img">
+      <img src="C:\Users\astro\OneDrive\Desktop\Christian Dweh Photos\001.PNG" alt="" class="per-imgs">
+    </div>
+
+    <div class="per-name">
+      <h3>Christian Dweh
+        <span>Zoeduamom</span>
+      </h3>
+      <h4>Liberia</h4>
+    </div>
+
+    <div class="status">
+      <div class="followers">
+        <h3>3K</h3>
+        <span>Following</span>
+      </div>
+
+      <div class="followers">
+        <h3>376K</h3>
+        <span>Followers</span>
+      </div>
+
+      <div class="followers">
+        <h3>978K</h3>
+        <span>Likes</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
